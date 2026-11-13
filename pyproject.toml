@@ -1,0 +1,27 @@
+[project]
+name = "persian-birthday-reminder"
+version = "1.0.0"
+description = "یادآور تولد شمسی"
+requires-python = ">=3.11"
+dependencies = [
+    "flet>=0.82.0",
+    "jdatetime",
+    "flet-android-notifications",
+]
+
+[tool.flet]
+org = "com.birthdayreminder"
+product = "یادآور تولد شمسی"
+company = "BirthdayReminder"
+copyright = "Copyright (C) 2026"
+
+[tool.flet.app]
+path = "."
+
+[tool.flet.android]
+min_sdk_version = 24
+
+[tool.flet.android.permission]
+"android.permission.POST_NOTIFICATIONS" = true
+"android.permission.SCHEDULE_EXACT_ALARM" = true
+"android.permission.RECEIVE_BOOT_COMPLETED" = true
